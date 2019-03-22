@@ -12,5 +12,7 @@ RUN apt-get update && apt-get -y install wget gnupg libcurl4 libprotobuf10 redis
     apt-get update && apt-get install -y yarn nodejs && \
     apt-get clean
 
+WORKDIR /data
+
 cmd tail -f /dev/null
 
