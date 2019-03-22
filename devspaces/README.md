@@ -61,13 +61,18 @@ rethinkdb &
 redis-server &
 ```
 
-7. Migrate database
+7. Install dependencies:
+```bash
+node shared/install-dependencies.js
+```
+
+8. Migrate database
 ```bash
 yarn run db:migrate
 yarn run db:seed
 ```
 
-8. Run the application
+9. Run the application
 
 ```bash
 yarn run dev:api &
