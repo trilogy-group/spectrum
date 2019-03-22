@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  builder:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: spectrum
+    ports:
+          - "3000:3000"
+    volumes:
+      - ../..:/data:Z
+    tty: true
