@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 LABEL description="This file generates a docker image containing all necessary components to build and run Spectrum"
 
-RUN apt-get update && apt-get -y install wget gnupg libcurl4 libprotobuf10 redis-server curl software-properties-common && \
+RUN apt-get update && apt-get -y install wget git gnupg libcurl4 libprotobuf10 redis-server curl software-properties-common && \
     wget https://github.com/srh/rethinkdb/releases/download/v2.3.6.srh.1/rethinkdb_2.3.6.srh.1.0bionic_amd64.deb && \
     dpkg -i /rethinkdb_2.3.6.srh.1.0bionic_amd64.deb && \
     cp /etc/rethinkdb/default.conf.sample /etc/rethinkdb/instances.d/instance1.conf && \
